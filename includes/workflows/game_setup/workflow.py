@@ -1,8 +1,12 @@
 from conductor.client.workflow.conductor_workflow import ConductorWorkflow
 
 from includes.settings import VERSION
-from includes.workflows.game_setup.tasks import create_game_in_backend_v1, wait_for_players_v1, \
-    evaluate_games_starting_conditions_v1, start_or_end_game_switch_v1
+from includes.workflows.game_setup.tasks import (
+    create_game_in_backend_v1,
+    wait_for_players_v1,
+    evaluate_games_starting_conditions_v1,
+    start_or_end_game_switch_v1,
+)
 from includes.workflows.shared import workflow_executor
 
 

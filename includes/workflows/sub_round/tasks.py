@@ -3,7 +3,9 @@ from conductor.client.workflow.task.join_task import JoinTask
 from conductor.client.workflow.task.sub_workflow_task import SubWorkflowTask
 
 from includes.settings import VERSION
-from includes.workflows.player_interaction.workflow import PLAYER_INTERACTION_WORKFLOW_NAME
+from includes.workflows.player_interaction.workflow import (
+    PLAYER_INTERACTION_WORKFLOW_NAME,
+)
 
 
 # tell a worker to inform a given player that the game has failed
