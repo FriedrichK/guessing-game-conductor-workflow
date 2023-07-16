@@ -13,8 +13,10 @@ add_player_workflow: ConductorWorkflow = ConductorWorkflow(
 )
 add_player_workflow.input_parameters(["game_round_workflow_id", "player_name"])
 
-# tasks
+
 add_player_workflow.add(add_player_v1)
+add_player_workflow.add(check_if_max_player_count_is_reached_v1)
+
 
 add_player_workflow.owner_email("fkauder@gmail.com")
 add_player_workflow.register(True)
