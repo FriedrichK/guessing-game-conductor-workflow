@@ -1,0 +1,7 @@
+*~
+*.pyc
+venv/
+.env
+.idea/
+.local/
+VERSION
