@@ -48,6 +48,9 @@ end_failed_game_round_sub_workflow_task_v1: SubWorkflowTask = SubWorkflowTask(
     workflow_name=END_FAILED_GAME_WORKFLOW_NAME,
     version=VERSION,
 )
+end_failed_game_round_sub_workflow_task_v1.input_parameters = {
+    "game_id": "${workflow.workflowId}",
+}
 
 
 ## ... the check detemines where to go next

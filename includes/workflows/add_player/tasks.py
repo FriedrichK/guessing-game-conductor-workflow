@@ -9,6 +9,7 @@ add_player_v1 = SimpleTask(
 add_player_v1.input_parameters = {
     "game_round_workflow_id": "${workflow.input.game_round_workflow_id}",
     "player_name": "${workflow.input.player_name}",
+    "player_password": "${workflow.input.player_password}",
 }
 
 

@@ -14,7 +14,7 @@ add_player_workflow: ConductorWorkflow = ConductorWorkflow(
     description="add a player",
     version=VERSION,
 )
-add_player_workflow.input_parameters(["game_round_workflow_id", "player_name"])
+add_player_workflow.input_parameters(["game_round_workflow_id", "player_name", "player_password"])
 
 
 add_player_workflow.add(add_player_v1)
