@@ -16,7 +16,7 @@ game_setup_workflow: ConductorWorkflow = ConductorWorkflow(
     description="play a round of the game",
     version=VERSION,
 )
-game_setup_workflow.input_parameters(["min_players", "max_players"])
+game_setup_workflow.input_parameters(["name", "min_players", "max_players"])
 
 
 game_setup_workflow.add(create_game_in_backend_v1)

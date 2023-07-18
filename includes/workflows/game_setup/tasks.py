@@ -12,6 +12,9 @@ create_game_in_backend_v1 = SimpleTask(
     task_def_name="create_game_in_backend_v1",
     task_reference_name="create_game_in_backend_v1",
 )
+create_game_in_backend_v1.input_parameters = {
+    "game_name": "${workflow.input.name}",
+}
 
 
 # wait a pre defined period of time for players to join
@@ -34,6 +37,9 @@ start_game_round_sub_workflow_task_v1: SubWorkflowTask = SubWorkflowTask(
     workflow_name=START_GAME_ROUND_WORKFLOW_NAME,
     version=VERSION,
 )
+start_game_round_sub_workflow_task_v1.input_parameters = {
+    "game_id": "${workflow.workflowId}",
+}
 
 
 ## ... on failure, close the game down!

@@ -6,9 +6,14 @@ from conductor.client.workflow.task.wait_task import WaitForDurationTask
 
 # trigger the player interaction process
 prompt_player_interaction_v1 = SimpleTask(
-    task_def_name="evaluate_games_starting_conditions_v1",
-    task_reference_name="evaluate_games_starting_conditions_v1",
+    task_def_name="prompt_player_interaction_v1",
+    task_reference_name="prompt_player_interaction_v1",
 )
+prompt_player_interaction_v1.input_parameters = {
+    "game_id": "${workflow.input.game_id}",
+    "players": "${workflow.input.players}",
+    "iteration": "${workflow.input.iteration}",
+}
 
 
 # the prompt will time out at some point
